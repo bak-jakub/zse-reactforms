@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from 'react';
+import {Router, Route, Routes,Link} from 'react-router-dom';
+import Main from './pages/Main';
+import Form from './pages/Form';
+import Help from './pages/Help';
+import { BrowserRouter } from 'react-router-dom';
+
+//let tasks = require('./assets/tasks.json');
+
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/form/:id/:unit7/:name?" element={<Form />} />
+        <Route path="/help" element={<Help />} />
+        
+      </Routes>
+    
   );
 }
 
